@@ -115,7 +115,13 @@ class r_asqli:
 
         }
 
-        self.execute()
+        if "[*]" in self.opt['url']:
+
+            self.execute()
+
+        else:
+
+            print("[-] Please you must add \"[*]\" for inject point!")
 
 if __name__ == "__main__":
 
