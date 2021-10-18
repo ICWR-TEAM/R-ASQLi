@@ -48,7 +48,7 @@ class r_asqli:
 
     def execute(self):
 
-        print("[*] Start Inject URL : {}\n".format(self.opt["url"].replace("[*]", "")))
+        print("[*] Start Injecting URL : {}\n".format(self.opt["url"].replace("[*]", "")))
 
         x = "1111111111"
 
@@ -63,7 +63,7 @@ class r_asqli:
                 if re.search("1111111111", get_union) :
 
                     result_url = self.opt['url'].replace("[*]", query_union)
-                    print("[+] This Site Is Vulnerability")
+                    print("[+] This Site is Vulnerable")
 
                     while True:
 
@@ -86,7 +86,7 @@ class r_asqli:
 
                             else :
 
-                                print("[-] Query Not Executed")
+                                print("[-] Query not Executed")
 
                         else:
 
@@ -102,7 +102,7 @@ class r_asqli:
     def __init__(self):
 
         parser = ArgumentParser()
-        parser.add_argument("-u", "--url", help = "URL Target with \"[*]\" for point of Inject", type = str, required = True)
+        parser.add_argument("-u", "--url", help = "URL Target With \"[*]\" for Point of Inject", type = str, required = True)
         parser.add_argument("-c", "--count", help = "Count Column", type = int, required = True)
         parser.add_argument("-t", "--timeout", help = "Time Out", type = int, required = True)
         self.args = parser.parse_args()
